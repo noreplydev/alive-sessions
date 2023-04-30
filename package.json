@@ -1,0 +1,31 @@
+{
+  "name": "alive-sessions",
+  "version": "1.0.0",
+  "description": "Track sessions expires times to trigger a callback when a session expires and revalidate session expire time.",
+  "main": "./lib/aliveSessions.js",
+  "type": "module",
+  "scripts": {
+    "test:unit": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "start": "node ./lib/aliveSessions.js"
+  },
+  "keywords": [
+    "session", "express-session", "alive-session", "sessions", "expire", 
+    "alive-session", "session-alive", "alive", "express-expire", "express-session-expire"
+  ],
+  "author": "Cristian Sánchez <contact.cristiansanchez@gmail.com> (https://www.cristiansanchez.me/)",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.5.0",
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
