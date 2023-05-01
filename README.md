@@ -1,48 +1,64 @@
 # alive-sessions
 Trigger a callback when a session expires and revalidate expire time when a session is used.
 
-When a session expires, the callback is triggered and the session is removed from the store (the store is a javascript object).
+When a session expires, the callback is triggered and the session is removed from the store. Since the store is a javascript object the time complexity of the operations is O(1), which is good for handling many sessions. 
 
 This trigger callback can be used to remove a session from a database.
 
+## Getting started
+Install this package using npm.
+```
+npm install alive-sessions
+```
+
+#### Esm
+```
+import * as aliveSessions from 'alive-sessions'
+```
+
+#### CommonJS
+```
+const aliveSessions = require('alive-sessions')
+```
+
 ## API
 
-#### Create a new session 
+#### ⚙️ Create a new session 
 Creating a new session will insert a new session in the store and 
 
 ```
-  createSession({
-    sessionID: 'you-session-id', 
-    expireMs: 300000, 
-    action: () => console.log('Session expired')
-  })
+createSession({
+  sessionID: 'you-session-id', 
+  expireMs: 300000, 
+  action: () => console.log('Session expired')
+})
 ```
 **sessionID:** The session id. It can be any string.
 **expireMs:** The session expire time in milliseconds.
 **action:** The callback to be triggered when the session expires.
 
-#### Revalidate a session
+#### ⚙️ Revalidate a session
 Revalidating a session will update the expire time of the session and prevent the session from expiring.
 
 ```
-  revalidateSession(sessionID, expireMs)
+revalidateSession(sessionID, expireMs)
 ```
 **sessionID:** The session id. It can be any string.
 **expireMs:** The session expire time in milliseconds.
 
-#### Check for a session  
+#### ⚙️ Check for a session  
 Check if a session exists in the store and prevent duplicate sessions. 
 
 ```
-  sessionExists(sessionID)
+sessionExists(sessionID)
 ```
 **sessionID:** The session id. It can be any string.
 
-#### Conversions
+#### ⚙️ Conversions
 alive-sessions package also provides helper functions to convert minutes and seconds to milliseconds.
 
 ```
-  secondsToMs(seconds)
-  minutesToMs(minutes)
+secondsToMs(seconds)
+minutesToMs(minutes)
 ```
 **seconds/minutes:** The number of the unit on each case.

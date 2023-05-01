@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Track sessions expires times to trigger a callback when a session expires and revalidate session expire time.",
   "main": "./lib/aliveSessions.js",
-  "type": "module",
+  "type": "commonjs",
   "author": "Cristian Sánchez <contact.cristiansanchez@gmail.com> (https://www.cristiansanchez.me/)",
   "license": "MIT",
   "keywords": [
@@ -16,11 +16,10 @@
   },
   "homepage": "https://github.com/sanchez-cristian/alive-sessions",
   "scripts": {
-    "test:unit": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:unit": "jest --verbose",
     "start": "node ./lib/aliveSessions.js"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "jest": "^29.5.0",
     "standard": "^17.0.0"
   },

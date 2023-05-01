@@ -1,4 +1,4 @@
-import { minutesToMs, secondsToMs } from '../lib/aliveSessions.js'
+const { minutesToMs, secondsToMs } = require('../lib/aliveSessions.js')
 
 // MINUTES TO MS TESTS
 test('Convert from Minutes to ms', () => {

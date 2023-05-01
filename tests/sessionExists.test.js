@@ -1,4 +1,4 @@
-import { sessionExists } from '../lib/aliveSessions.js'
+const { sessionExists } = require('../lib/aliveSessions.js')
 
 // SESSION EXISTS TESTS
 test('SessionExists returns false when session does not exist', () => {

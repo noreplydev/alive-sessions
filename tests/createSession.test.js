@@ -1,4 +1,4 @@
-import { createSession, retimeSession } from '../lib/aliveSessions.js'
+const { createSession } = require('../lib/aliveSessions.js')
 
 // CREATE A SESSION TESTS
 test('Create a new session and attach to the session obj', () => {
