@@ -1,6 +1,6 @@
 {
   "name": "alive-sessions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Track sessions expires times to trigger a callback when a session expires and revalidate session expire time.",
   "main": "./lib/aliveSessions.js",
   "type": "commonjs",
@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/sanchez-cristian/alive-sessions",
   "scripts": {
-    "test:unit": "jest --verbose",
+    "test:unit": "jestj",
     "start": "node ./lib/aliveSessions.js"
   },
   "devDependencies": {
