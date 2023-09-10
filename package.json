@@ -7,8 +7,16 @@
   "author": "Cristian Sánchez <contact.cristiansanchez@gmail.com> (https://www.cristiansanchez.me/)",
   "license": "MIT",
   "keywords": [
-    "session", "express-session", "alive-session", "sessions", "expire", 
-    "alive-session", "session-alive", "alive", "express-expire", "express-session-expire"
+    "session",
+    "express-session",
+    "alive-session",
+    "sessions",
+    "expire",
+    "alive-session",
+    "session-alive",
+    "alive",
+    "express-expire",
+    "express-session-expire"
   ],
   "repository": {
     "type": "git",

@@ -40,6 +40,7 @@ Creating a new session will insert a new session in the store and start the expi
 createSession({
   sessionID: 'you-session-id', 
   expireMs: 300000, 
+  data: any,
   action: () => console.log('Session expired')
 })
 ```
@@ -47,6 +48,7 @@ createSession({
 `REQ` sessionID: The session id. It can be any string.
 `DEF=5min` expireMs: The session expire time in milliseconds.
 `REQ` action: The callback to be triggered when the session expires.
+`DEF=null` data: Any data to be passed to the callback.
 
 **Returns:** `Undefined` if the session was created successfully or `throws an error` if something went wrong.
 
@@ -83,6 +85,17 @@ removeSession(sessionID)
 `REQ` sessionID: The session id. It can be any string.
 
 **Returns:** `Undefined` if the session was removed successfully or `throws an error` if something went wrong.
+
+#### ⚙️ Get a session data  
+Given a session id, get the data associated with the session.
+
+```
+getSessionData(sessionID)
+```
+**Params:**
+`REQ` sessionID: The session id. It can be any string.
+
+**Returns:** The session value (`any`) or `throws an error` if something went wrong. The default session value is `null`.
 
 #### ⚙️ Sessions
 Get all sessions from the store for testing purposes. Modifying the store directly is not recommended and may result in unexpected errors.
